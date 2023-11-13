@@ -1,0 +1,93 @@
+.App {
+  text-align: center;
+  background: url(https://i.pinimg.com/originals/93/01/25/9301258942733e3725f2757c18d1c441.jpg);
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.input-search {
+  margin-top: 20px;
+  width: 200px;
+  height: 30px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  border-bottom: 1px solid #1c1d1d;
+  background: transparent;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-search::placeholder {
+  color: #1c1d1daf;
+  font-weight: 500;
+}
+
+.btton-search {
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  height: 30px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to left, #24fe41, #fdffef);
+}
+
+.btton-search:hover {
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.card {
+  background: linear-gradient(to top, #2bf846, #12c2e9);
+  border-radius: 10px;
+
+  box-shadow: 1px 2px #fdffef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 10px;
+  width: 300px;
+  height: 400px;
+  margin: 50px;
+  -webkit-animation: slide-in-elliptic-left-fwd 0.7s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-elliptic-left-fwd 0.7s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.card-img {
+  width: 150px;
+  border: 2px solid #fdffef;
+  border-radius: 5px;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 280px;
+}
+
+.card-btton {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: none;
+  border: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
