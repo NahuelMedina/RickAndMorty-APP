@@ -1,10 +1,16 @@
 export default function Card(character) {
+  // console.log(character)
   return (
-    <div className="card">
+    <div className="card" id={character.id}>
       <img
-        src="/src/icons8-cross-32.png"
+        src="/src/assets/icons8-cross-32.png"
         className="card-btton"
-        onClick={character.onClose}
+        onClick={
+          ((event) => character.onClose(character.id, event),
+          () => {
+            document.getElementById(character.id).className = "card-clicked";
+          })
+        }
       ></img>
       <div>
         <img className="card-img" src={character.image} alt="img-pj" />
