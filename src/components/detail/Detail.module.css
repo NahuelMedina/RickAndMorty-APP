@@ -1,0 +1,28 @@
+.divDetail {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(14, 13, 13, 0.164);
+}
+
+.divDetail div:first-child {
+  display: flex;
+  background: var(--color-background-cards);
+  border-radius: 10px;
+  box-shadow: 1px 2px var(--color-box-shadow);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 350px;
+  height: 400px;
+  color: var(--color-letter-card);
+}
+
+.cardImg {
+  width: 300px;
+  border: 2px solid var(--color-box-shadow);
+  border-radius: 5px;
+}

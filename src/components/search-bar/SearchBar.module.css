@@ -1,0 +1,54 @@
+.divSearchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputSearch {
+  width: 200px;
+  height: 30px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  border-bottom: 1px solid #1c1d1d;
+  background: transparent;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputSearch::placeholder {
+  color: #1c1d1daf;
+  font-weight: 500;
+}
+
+.bttonSearch {
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  height: 30px;
+  width: 100px;
+  border: none;
+  box-shadow: 2px 2px 4px var(--color-box-shadow);
+  border-radius: 5px;
+  background: var(--color-button-nav);
+}
+
+.bttonSearch:hover {
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
