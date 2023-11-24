@@ -30,7 +30,7 @@ export default function Form(props) {
         <form onSubmit={handleSubmit}>
           <img src="/src/assets/login-logo.png" alt="logo-login" />
           <div>
-            <label>Email:</label>
+            <label>Email: </label>
             <input
               value={userData.email}
               key="email"
@@ -41,7 +41,7 @@ export default function Form(props) {
           </div>
           <p>{errors.email && errors.email}</p>
           <div>
-            <label>Password:</label>
+            <label>Password: </label>
             <input
               value={userData.password}
               key="password"
