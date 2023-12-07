@@ -1,0 +1,46 @@
+.divForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.cardForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 500px;
+  background: url("../../assets/space-background.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 2px 2px 10px #fdffef;
+}
+
+.cardForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #02e921;
+  width: 300px;
+  height: 400px;
+}
+
+.cardForm form input {
+  outline: none;
+}
+
+.cardForm form img {
+  width: 300px;
+}
+
+.cardForm form button {
+  width: 150px;
+  height: 40px;
+}
+
+.cardForm p {
+  color: rgb(197, 15, 15);
+}

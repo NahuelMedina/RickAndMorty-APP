@@ -1,0 +1,11 @@
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 80px;
+}
+
+.messageEmpty {
+  color: var(--color-letter-card);
+  text-shadow: 1px 1px 1px white;
+}
