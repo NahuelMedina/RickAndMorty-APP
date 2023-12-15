@@ -26,14 +26,15 @@ function App() {
     if (characterId.length) {
       return alert(`El personaje ${characterId[0].name} ya existe`);
     }
-    const res = await axios.get(`${URL}${id}`);
-    const data = res.data;
-    console.log(data);
-    if (data.name) {
-      navigate("/home");
-      setCharacters((oldChars) => [...oldChars, data]);
-    } else {
-      window.alert("¡No hay personajes con este ID!");
+    try {
+      const res = await axios(`${URL}${id}`);
+      const data = res.data;
+      if (data.name) {
+        navigate("/home");
+        setCharacters((oldChars) => [...oldChars, data]);
+      }
+    } catch (error) {
+      return alert("No existe un personaje con ese ID");
     }
   };
 

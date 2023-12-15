@@ -26,6 +26,7 @@ export default function Form(props) {
 
   return (
     <div className={styleForm.divForm}>
+      <div><img src="https://th.bing.com/th/id/R.449c88ba963a86eb76630ef09269c9c0?rik=Ct99uKKjmYMcHA&pid=ImgRaw&r=0" alt="" /></div>
       <div className={styleForm.cardForm}>
         <form onSubmit={handleSubmit}>
           <img
@@ -33,23 +34,25 @@ export default function Form(props) {
             alt="logo-login"
           />
           <div>
-            <label>Email: </label>
+            <label for="email" >Email: </label>
             <input
               value={userData.email}
               key="email"
               type="email"
               name="email"
+              id="email"
               onChange={handleChange}
             />
           </div>
           <p>{errors.email && errors.email}</p>
           <div>
-            <label>Password: </label>
+            <label for="password">Password: </label>
             <input
               value={userData.password}
               key="password"
               type="password"
               name="password"
+              id="password"
               onChange={handleChange}
             />
           </div>

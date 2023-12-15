@@ -1,8 +1,10 @@
 :root {
-  --color-button-nav: linear-gradient(to left, #02e921, #fdffef);
-  --color-background-cards: linear-gradient(to top, #02e921, #12c2e9);
-  --color-box-shadow: #fdffef;
+  --color-button-nav: linear-gradient(to left, #88e23b, var(--white));
+  --color-background-cards: linear-gradient(to top, #60a85f, #88e23b);
+  --white: #fdffef;
   --color-letter-card: #0f0f0f;
+  --green: #88e23b;
+  --mytery-color: #a6cccc;
 }
 
 .App {

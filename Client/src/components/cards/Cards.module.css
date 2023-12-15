@@ -1,11 +1,19 @@
 .cardsContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 80px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
 }
 
-.messageEmpty {
-  color: var(--color-letter-card);
-  text-shadow: 1px 1px 1px white;
+.messageEmpty{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.messageEmpty h1 {
+  color:  var(--white);
+  text-shadow: 1px 1px 1px var(--green);
 }

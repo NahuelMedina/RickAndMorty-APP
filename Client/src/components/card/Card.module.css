@@ -1,7 +1,7 @@
 .card {
   background: var(--color-background-cards);
   border-radius: 10px;
-  box-shadow: 2px 2px 3px black;
+  box-shadow: 1px 1px 2px var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,43 +10,28 @@
   width: 230px;
   height: 300px;
   margin: 30px;
-  -webkit-animation: slide-in-elliptic-left-fwd 0.7s
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-elliptic-left-fwd 0.7s
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
-.card :link {
-  font-size: 15px;
+
+.card :link h2 {
   text-decoration: none;
   text-align: center;
   color: var(--color-letter-card);
-  text-shadow: 1px 1px 1px white;
+}
+
+.card :link:hover{
+  transition: .5s all;
+  text-shadow: 1px 1px 1px var(--white);
 }
 
 .card :visited {
-  color: var(--color-letter-card);
+  color: transparent;
 }
-
-/* .cardClicked {
-  background: var(--color-background-cards);
-  border-radius: 10px;
-
-  box-shadow: 1px 2px var(--color-box-shadow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 15px;
-  width: 250px;
-  height: 300px;
-  margin: 30px;
-  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-} */
 
 .cardImg {
   width: 150px;
-  border: 2px solid var(--color-box-shadow);
+  border: 2px solid var(--white);
   border-radius: 5px;
 }
 
@@ -61,6 +46,7 @@
   width: 280px;
 }
 
+
 .cardBtton {
   position: absolute;
   right: 5px;
@@ -72,6 +58,12 @@
   cursor: pointer;
 }
 
+.cardBtton:hover{
+  animation: rotate-in-diag-2 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+
 .cardFav {
   position: absolute;
   left: 5px;
@@ -80,6 +72,7 @@
   border: none;
   cursor: pointer;
 }
+
 
 /* ANIMACIONES */
 
@@ -94,19 +87,6 @@
   }
 }
 
-@keyframes scale-out-center {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    opacity: 0;
-    display: none;
-  }
-}
 
 @keyframes slide-in-elliptic-left-fwd {
   0% {
@@ -121,6 +101,42 @@
     transform: translateX(0) rotateY(0) scale(1);
     -webkit-transform-origin: 1800px 50%;
     transform-origin: 1800px 50%;
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes rotate-in-diag-2 {
+  0% {
+    -webkit-transform: rotate3d(-1, 1, 0, -360deg);
+            transform: rotate3d(-1, 1, 0, -360deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+            transform: rotate3d(-1, 1, 0, 0deg);
     opacity: 1;
   }
 }

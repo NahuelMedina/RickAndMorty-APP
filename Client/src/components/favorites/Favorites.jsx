@@ -6,6 +6,7 @@ export default function Favorites({ onClose }) {
   const myFavorites = useSelector((state) => state.myFavorites);
   return (
     <div className={styleCards.cardsContainer}>
+  
       {myFavorites.length ? (
         myFavorites?.map((character) => (
           <Card
@@ -21,7 +22,9 @@ export default function Favorites({ onClose }) {
           />
         ))
       ) : (
-        <h1 className={styleCards.messageEmpty}>No tienes Favoritos</h1>
+        <div className={styleCards.messageEmpty}>
+          <h1 >No tienes Favoritos</h1></div>
+        
       )}
     </div>
   );

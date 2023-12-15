@@ -22,10 +22,12 @@ export default function Detail() {
     <div className={styleDetail.divDetail}>
       <div>
         <h2>{character.name}</h2>
-        <h3>State: {character.status}</h3>
-        <h3>Specie: {character.species}</h3>
-        <h3>Gender: {character.gender}</h3>
-        <h3>Origin: {character.origin?.name}</h3>
+        <ul>
+          <li>State: {character.status}</li>
+          <li>Specie: {character.species}</li>
+          <li>Gender: {character.gender}</li>
+          <li>Origin: {character.origin?.name}</li>
+        </ul>
       </div>
       <div>
         <img

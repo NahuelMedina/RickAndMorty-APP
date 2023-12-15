@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 import { addFav, removeFav } from "../../redux/actions";
 
 export default function Card(character) {
-  //console.log(character);
-
   const dispatch = useDispatch();
   const [isFav, setIsFav] = useState(false);
   const handleFavorite = () => {
